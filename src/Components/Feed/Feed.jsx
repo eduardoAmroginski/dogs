@@ -5,6 +5,8 @@ import FeedPhotos from "./FeedPhotos/FeedPhotos";
 
 import PropTypes from "prop-types";
 
+import styles from "./Feed.module.css";
+
 const Feed = ({ user }) => {
   const [modalPhoto, setModalPhoto] = useState(null);
   const [pages, setPages] = useState([1]);
@@ -48,6 +50,9 @@ const Feed = ({ user }) => {
           setInfinite={setInfinite}
         />
       ))}
+      {!infinite && !user && (
+        <p className={styles.noMorePosts}>Não existem mais postagens.</p>
+      )}
     </div>
   );
 };
