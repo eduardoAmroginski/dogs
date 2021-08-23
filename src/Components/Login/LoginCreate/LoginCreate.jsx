@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import Input from "../../Forms/Input/Input";
 import Button from "../../Forms/Button/Button";
 import Error from "../../Helper/Error/Error";
+import Head from "../../Helper/Head/Head";
 
 import useForm from "../../../Hooks/useForm";
 
@@ -36,6 +37,7 @@ const LoginCreate = () => {
 
   return (
     <section className="animeLeft">
+      <Head title="Criar Conta" />
       <h1 className="title">Cadastre-se</h1>
       <form onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />
