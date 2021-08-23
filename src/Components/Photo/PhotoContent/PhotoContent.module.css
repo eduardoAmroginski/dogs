@@ -15,6 +15,7 @@
 .single.photo {
   grid-template-columns: 1fr;
   height: auto;
+  margin-bottom: 2rem;
 }
 
 @keyframes scaleUp {
