@@ -34,7 +34,7 @@ const PhotoContent = ({ data, single }) => {
           <ul className={styles.attributes}>
             <li>{photo.peso} kg</li>
             <li>
-              {photo.idade} {photo.idade == 1 ? "anos" : "ano"}
+              {photo.idade} {photo.idade === 1 ? "anos" : "ano"}
             </li>
           </ul>
         </div>

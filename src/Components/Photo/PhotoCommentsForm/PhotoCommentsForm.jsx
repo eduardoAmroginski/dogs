@@ -10,7 +10,7 @@ import { COMMENT_POST } from "../../../api";
 import styles from "./PhotoCommentsForm.module.css";
 
 const PhotoCommentsForm = ({ id, setComments, single }) => {
-  const { request, error, loading } = useFetch();
+  const { request, error } = useFetch();
 
   const [comment, setComment] = useState("");
 

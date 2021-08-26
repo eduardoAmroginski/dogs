@@ -7,7 +7,7 @@ import { ReactComponent as Dogs } from "../../Assets/dogs.svg";
 import { UserContext } from "../../Contexts/UserContext";
 
 const Header = () => {
-  const { data, userLogout } = useContext(UserContext);
+  const { data } = useContext(UserContext);
 
   return (
     <header className={styles.header}>

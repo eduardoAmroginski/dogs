@@ -13,10 +13,9 @@ const Photo = () => {
   const { id } = useParams();
   const { data, loading, error, request } = useFetch();
 
-  useEffect(async () => {
+  useEffect(() => {
     const { url, options } = PHOTO_GET(id);
-    const { response, json } = await request(url, options);
-    console.log(json);
+    request(url, options);
   }, [request, id]);
 
   if (error) return <Error error={error} />;

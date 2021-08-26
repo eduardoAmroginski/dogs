@@ -25,12 +25,12 @@ const LoginPasswordLost = () => {
         url: site,
       });
 
-      const { json } = await request(url, options);
+      await request(url, options);
     }
   }
 
   return (
-    <section>
+    <section className="animeLeft">
       <Head title="Esqueceu a senha?" />
       <h1 className="title">Esqueceu a senha?</h1>
       {data ? (

@@ -15,7 +15,7 @@ const LoginPasswordReset = () => {
   const [login, setLogin] = useState("");
   const [key, setKey] = useState("");
   const password = useForm();
-  const { data, loading, error, request } = useFetch();
+  const { loading, error, request } = useFetch();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const LoginPasswordReset = () => {
   }
 
   return (
-    <section>
+    <section className="animeLeft">
       <Head title="Resetar Senha" />
       <h1 className="title">Resetar Senha</h1>
       <form onSubmit={handleSubmit}>

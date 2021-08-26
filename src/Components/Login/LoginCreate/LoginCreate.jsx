@@ -11,7 +11,6 @@ import { UserContext } from "../../../Contexts/UserContext";
 
 import { USER_POST } from "../../../api";
 import useFetch from "../../../Hooks/useFetch";
-import styles from "./LoginCreate.module.css";
 
 const LoginCreate = () => {
   const username = useForm();
@@ -29,7 +28,7 @@ const LoginCreate = () => {
       password: password.value,
     });
 
-    const { response, json } = await request(url, options);
+    const { response } = await request(url, options);
 
     if (response.ok) userLogin(username.value, password.value);
     console.log(response);
