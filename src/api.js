@@ -134,3 +134,17 @@ export function PASSWORD_RESET(body) {
     },
   };
 }
+
+
+export function STATS_GET(token) {
+  return {
+    url: `${API_URL}/api/stats`,
+    options: {
+      method: "GET",
+      cache: "no-store",
+      headers: {
+        Authorization: "Bearer " + token,
+      },
+    },
+  };
+}
